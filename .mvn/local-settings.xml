@@ -1,0 +1,10 @@
+<settings>
+    <mirrors>
+        <mirror>
+            <id>snapshot-http-unblocker</id>
+            <mirrorOf>snapshots</mirrorOf>
+            <name></name>
+            <url>http://repository.apache.org/snapshots</url>
+        </mirror>
+    </mirrors>
+</settings>
