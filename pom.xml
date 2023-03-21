@@ -198,6 +198,14 @@
     </plugins>
   </build>
   <repositories>
+    <!-- http->https   -->
+    <repository>
+      <id>mulesoft-release</id>
+      <name>muleSoft release repository</name>
+      <url>http://repository.mulesoft.org/releases/</url>; ==> replace with HTTPS URL https://repository.mulesoft.org/releases/
+      <layout>default</layout>
+    </repository>
+	  
     <repository>
       <id>bookkeeper-twitter-mvn-repo</id>
       <url>https://raw.github.com/twitter/bookkeeper/mvn-repo/${bookkeeper.version}</url>
