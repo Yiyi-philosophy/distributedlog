@@ -16,8 +16,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - name: Clean
-        run: mvn clean install -U
+#       - name: Clean
+#         run: mvn clean install -U
       - name: Test
         run: mvn -pl distributedlog-core test -Dtest=com.twitter.distributedlog.impl.metadata.TestZKLogMetadataForWriter#testCreateLogMetadataWithCustomMetadata
         
@@ -30,8 +30,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - name: Clean
-        run: mvn clean install -U
+#       - name: Clean
+#         run: mvn clean install -U
       - name: Test
         run: mvn -pl distributedlog-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=com.twitter.distributedlog.impl.metadata.TestZKLogMetadataForWriter#testCreateLogMetadataWithCustomMetadata
         
