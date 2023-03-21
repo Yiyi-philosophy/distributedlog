@@ -3,8 +3,8 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
     <mirrors>
         <mirror>
-            <id>my-repository-http-unblocker</id>
-            <mirrorOf>my-blocked-http-repository</mirrorOf>
+            <id>maven-default-http-blocker</id>
+            <mirrorOf>maven-default-http</mirrorOf>
             <name></name>
             <url>http://repository.apache.org/snapshots</url>
         </mirror>
