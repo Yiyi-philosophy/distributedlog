@@ -1,0 +1,33 @@
+# https://github.com/twitter-archive/distributedlog,
+# 6c7b5745b697617327235a8b773a4263e50875ee,
+# distributedlog-core,
+# com.twitter.distributedlog.impl.metadata.TestZKLogMetadataForWriter.testCreateLogMetadataWithCustomMetadata
+# ,ID,,,
+name: Test:TestZKLogMetadataForWriter.testCreateLogMetadataWithCustomMetadata
+run-name: Known Flaky test
+on: [push]
+jobs:
+  Test_Without_Nondex_Shuffling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl distributedlog-core test -Dtest=com.twitter.distributedlog.impl.metadata.TestZKLogMetadataForWriter#testCreateLogMetadataWithCustomMetadata
+        
+  Test_With_Nondex_Shuffling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+      - name: Test
+        run: mvn -pl distributedlog-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=com.twitter.distributedlog.impl.metadata.TestZKLogMetadataForWriter#testCreateLogMetadataWithCustomMetadata
+        
